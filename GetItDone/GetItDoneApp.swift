@@ -7,11 +7,24 @@
 
 import SwiftUI
 
+/*
+ MVVM Architecture
+ 
+ Model = data point
+ View - UI
+ ViewModel - manages models for view
+ 
+ 
+ */
+
+
 @main
 struct GetItDoneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{ //all apps will be within a NavigationView
+                ListView()
+            }
         }
     }
 }

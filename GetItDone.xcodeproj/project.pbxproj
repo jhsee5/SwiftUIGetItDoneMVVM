@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		C01650FC28925FED008E15A7 /* GetItDoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01650FB28925FED008E15A7 /* GetItDoneApp.swift */; };
-		C01650FE28925FED008E15A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01650FD28925FED008E15A7 /* ContentView.swift */; };
 		C016510028925FEE008E15A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01650FF28925FEE008E15A7 /* Assets.xcassets */; };
 		C016510328925FEE008E15A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C016510228925FEE008E15A7 /* Preview Assets.xcassets */; };
+		C023675A28957917002D770F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023675928957917002D770F /* ListView.swift */; };
+		C023675C28957AD9002D770F /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023675B28957AD9002D770F /* ListRowView.swift */; };
+		C023675E28957D89002D770F /* AddVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023675D28957D89002D770F /* AddVIew.swift */; };
+		C0482E38289938E400D4A7A9 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0482E37289938E400D4A7A9 /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01650F828925FED008E15A7 /* GetItDone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetItDone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01650FB28925FED008E15A7 /* GetItDoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItDoneApp.swift; sourceTree = "<group>"; };
-		C01650FD28925FED008E15A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C01650FF28925FEE008E15A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C016510228925FEE008E15A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C023675928957917002D770F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C023675B28957AD9002D770F /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		C023675D28957D89002D770F /* AddVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVIew.swift; sourceTree = "<group>"; };
+		C0482E37289938E400D4A7A9 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				C01650FB28925FED008E15A7 /* GetItDoneApp.swift */,
-				C01650FD28925FED008E15A7 /* ContentView.swift */,
+				C0482E36289938BF00D4A7A9 /* Models */,
+				C023675828957902002D770F /* Views */,
 				C01650FF28925FEE008E15A7 /* Assets.xcassets */,
 				C016510128925FEE008E15A7 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				C016510228925FEE008E15A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C023675828957902002D770F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C023675928957917002D770F /* ListView.swift */,
+				C023675D28957D89002D770F /* AddVIew.swift */,
+				C023675B28957AD9002D770F /* ListRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0482E36289938BF00D4A7A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0482E37289938E400D4A7A9 /* ItemModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01650FE28925FED008E15A7 /* ContentView.swift in Sources */,
+				C0482E38289938E400D4A7A9 /* ItemModel.swift in Sources */,
+				C023675E28957D89002D770F /* AddVIew.swift in Sources */,
 				C01650FC28925FED008E15A7 /* GetItDoneApp.swift in Sources */,
+				C023675A28957917002D770F /* ListView.swift in Sources */,
+				C023675C28957AD9002D770F /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
