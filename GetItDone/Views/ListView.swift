@@ -12,25 +12,33 @@ struct ListView: View {
     @EnvironmentObject var listViewModel: ListVM
     
     var body: some View {
-        List{
-            ForEach(listViewModel.items) { item in
-                ListRowView(item: item)
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            listViewModel.updateItem(item: item)
-                        }
+        ZStack{
+            if listViewModel.items.isEmpty {
+                Text("No items")
+            } else {
+                List{
+                    ForEach(listViewModel.items) { item in
+                        ListRowView(item: item)
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    listViewModel.updateItem(item: item)
+                                }
+                            }
                     }
+                    .onDelete(perform: listViewModel.deleteItem)
+                    .onMove(perform: listViewModel.moveItem)
+                }
+                .listStyle(PlainListStyle())
             }
-            .onDelete(perform: listViewModel.deleteItem)
-            .onMove(perform: listViewModel.moveItem)
+            
         }
-        .listStyle(PlainListStyle())
+        
         .navigationTitle("Todo List 📝") //ctrl cmd space
         .navigationBarItems(
             leading: EditButton(),
             trailing:
                 NavigationLink("Add", destination: AddVIew())
-            )
+        )
     }
 }
 
@@ -38,7 +46,7 @@ struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             ListView()
-                
+            
         }
         .environmentObject(ListVM())
     }
