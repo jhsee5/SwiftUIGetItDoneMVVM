@@ -20,11 +20,15 @@ import SwiftUI
 
 @main
 struct GetItDoneApp: App {
+    
+    @StateObject var listViewModel: ListVM = ListVM()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView{ //all apps will be within a NavigationView
                 ListView()
             }
+            .environmentObject(listViewModel)
         }
     }
 }
