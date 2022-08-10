@@ -28,6 +28,7 @@ struct GetItDoneApp: App {
             NavigationView{ //all apps will be within a NavigationView
                 ListView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(listViewModel)
         }
     }
